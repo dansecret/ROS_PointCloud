@@ -1,0 +1,2 @@
+pcl_viewer
+-DCATKIN_DEVEL_PREFIX=/home/dandi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dandi/catkin_ws/install -G Unix Makefiles

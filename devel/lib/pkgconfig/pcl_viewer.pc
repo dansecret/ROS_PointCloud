@@ -1,0 +1,8 @@
+prefix=/home/dandi/catkin_ws/devel
+
+Name: pcl_viewer
+Description: Description of pcl_viewer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
