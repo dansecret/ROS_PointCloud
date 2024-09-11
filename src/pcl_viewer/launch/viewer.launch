@@ -1,0 +1,13 @@
+<launch>
+
+   <node pkg="pcl_viewer" type="pcl_viewer_node" name="pcl_viewer_node"/>
+   
+   <node pkg="pcl_viewer" type="action" name="action"/>
+   
+
+   <node pkg="rviz" type="rviz" name="rviz" output="screen">
+    <!-- Optional: Specify a configuration file -->
+    <!-- <param name="config" value="$(find my_rviz_package)/config/rviz_config.rviz" /> -->
+  </node>
+
+</launch>

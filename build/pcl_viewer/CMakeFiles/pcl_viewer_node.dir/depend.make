@@ -7,6 +7,7 @@ pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/no
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/pcl_msgs/PointIndices.h
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/pcl_msgs/PolygonMesh.h
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/pcl_msgs/Vertices.h
+pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/pcl_ros/point_cloud.h
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 pcl_viewer/CMakeFiles/pcl_viewer_node.dir/src/pcl_viewer_node.cpp.o: /opt/ros/noetic/include/ros/assert.h

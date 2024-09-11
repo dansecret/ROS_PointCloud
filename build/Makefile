@@ -1260,6 +1260,19 @@ pcl_msgs_generate_messages_lisp/fast:
 .PHONY : pcl_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named action
+
+# Build rule for target.
+action: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 action
+.PHONY : action
+
+# fast build rule for target.
+action/fast:
+	$(MAKE) -f pcl_viewer/CMakeFiles/action.dir/build.make pcl_viewer/CMakeFiles/action.dir/build
+.PHONY : action/fast
+
+#=============================================================================
 # Target rules for targets named pcl_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1421,6 +1434,7 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... action"
 	@echo "... pcl_msgs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... nodelet_generate_messages_py"

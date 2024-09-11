@@ -1,0 +1,3 @@
+<launch>
+   <node pkg="pcl_viewer" type="action" name="action"/>
+</launch>

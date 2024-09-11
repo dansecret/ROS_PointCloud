@@ -1293,6 +1293,21 @@ pcl_msgs_generate_messages_lisp/fast:
 .PHONY : pcl_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+pcl_viewer/CMakeFiles/action.dir/rule:
+	cd /home/dandi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_viewer/CMakeFiles/action.dir/rule
+.PHONY : pcl_viewer/CMakeFiles/action.dir/rule
+
+# Convenience name for target.
+action: pcl_viewer/CMakeFiles/action.dir/rule
+
+.PHONY : action
+
+# fast build rule for target.
+action/fast:
+	cd /home/dandi/catkin_ws/build && $(MAKE) -f pcl_viewer/CMakeFiles/action.dir/build.make pcl_viewer/CMakeFiles/action.dir/build
+.PHONY : action/fast
+
+# Convenience name for target.
 pcl_viewer/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
 	cd /home/dandi/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_viewer/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 .PHONY : pcl_viewer/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
@@ -1366,6 +1381,33 @@ topic_tools_generate_messages_lisp: pcl_viewer/CMakeFiles/topic_tools_generate_m
 topic_tools_generate_messages_lisp/fast:
 	cd /home/dandi/catkin_ws/build && $(MAKE) -f pcl_viewer/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make pcl_viewer/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
 .PHONY : topic_tools_generate_messages_lisp/fast
+
+src/action.o: src/action.cpp.o
+
+.PHONY : src/action.o
+
+# target to build an object file
+src/action.cpp.o:
+	cd /home/dandi/catkin_ws/build && $(MAKE) -f pcl_viewer/CMakeFiles/action.dir/build.make pcl_viewer/CMakeFiles/action.dir/src/action.cpp.o
+.PHONY : src/action.cpp.o
+
+src/action.i: src/action.cpp.i
+
+.PHONY : src/action.i
+
+# target to preprocess a source file
+src/action.cpp.i:
+	cd /home/dandi/catkin_ws/build && $(MAKE) -f pcl_viewer/CMakeFiles/action.dir/build.make pcl_viewer/CMakeFiles/action.dir/src/action.cpp.i
+.PHONY : src/action.cpp.i
+
+src/action.s: src/action.cpp.s
+
+.PHONY : src/action.s
+
+# target to generate assembly for a file
+src/action.cpp.s:
+	cd /home/dandi/catkin_ws/build && $(MAKE) -f pcl_viewer/CMakeFiles/action.dir/build.make pcl_viewer/CMakeFiles/action.dir/src/action.cpp.s
+.PHONY : src/action.cpp.s
 
 src/pcl_viewer_node.o: src/pcl_viewer_node.cpp.o
 
@@ -1482,11 +1524,15 @@ help:
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... test"
+	@echo "... action"
 	@echo "... pcl_msgs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... nodelet_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... src/action.o"
+	@echo "... src/action.i"
+	@echo "... src/action.s"
 	@echo "... src/pcl_viewer_node.o"
 	@echo "... src/pcl_viewer_node.i"
 	@echo "... src/pcl_viewer_node.s"

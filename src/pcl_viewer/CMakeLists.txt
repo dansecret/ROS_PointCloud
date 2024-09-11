@@ -21,7 +21,13 @@ include_directories(
 )
 
 add_executable(pcl_viewer_node src/pcl_viewer_node.cpp)
+add_executable(action src/action.cpp)
 target_link_libraries(pcl_viewer_node
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+)
+
+target_link_libraries(action
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
 )

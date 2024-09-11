@@ -17,12 +17,12 @@ int main(int argc, char** argv)
     ros::NodeHandle nh;
 
     // Publisher untuk publish file pcd
-    ros::Publisher pcl_pub = nh.advertise<sensor_msgs::PointCloud2>("point_cloud", 1);
+    ros::Publisher pcl_pub = nh.advertise<sensor_msgs::PointCloud2>("point_cloud9", 1);
 
     // Read file pcd
     pcl::PointCloud<pcl::PointXYZ> cloud;
     ROS_INFO("Read point");
-    pcl::io::loadPCDFile<pcl::PointXYZ>("/home/dandi/catkin_ws/src/pcl_viewer/data/horse.pcd", cloud);
+    pcl::io::loadPCDFile<pcl::PointXYZ>("/home/dandi/catkin_ws/src/pcl_viewer/data/lioness.pcd", cloud);
 
 
     // Convert ke sensor_msgs::PointCloud2
@@ -30,14 +30,22 @@ int main(int argc, char** argv)
     pcl::toROSMsg(cloud, cloud_msg);
     cloud_msg.header.frame_id = "map"; 
 
-    ros::Rate rate(30);  // 30 Hz
+    // Save the rotated point cloud to a new PCD file
+    if (pcl::io::savePCDFile("/home/dandi/catkin_ws/src/pcl_viewer/data/rotated_lioness.pcd", cloud) == -1)
+    {
+        ROS_ERROR("Failed to save PCD file");
+        return -1;
+    }
+    ROS_INFO("Saved rotated point cloud to file");
+
+    ros::Rate rate(1);  // 1 Hz
     while (ros::ok())
     {
+        ROS_INFO("Publish cloud msg");
         pcl_pub.publish(cloud_msg);
         ros::spinOnce();
         rate.sleep();
     }
-
     return 0;
 }
 
